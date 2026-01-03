@@ -1,316 +1,391 @@
-# goit-js-hw-05
+# Homework №5
 
-Домашнє завдання №5
+## Instructions
 
-Створи репозиторій goit-js-hw-05 та склонюй його собі на комп’ютер.
-У папці goit-js-hw-05 створи структуру проєкта, як показано на схемі нижче.
-Зверни увагу! Імена файлів та папок, а також їх структура вкладеності, мають відповідати вказаній схемі. В іншому разі робота не буде прийнята.
+- Create a repository **goit-js-hw-05** and clone it to your computer.
+- In the `goit-js-hw-05` folder, create the project structure as shown in the diagram below.
 
-Прочитай кожне завдання і виконай його у відповідному файлі.
-Переконайся, що код відформатований за допомогою Prettier, а в консолі відсутні помилки й попередження під час відкриття живої сторінки завдання
-Здай домашнє завдання на перевірку
-Формат здачі: Домашня робота містить два посилання: на вихідні файли та робочу сторінку на GitHub Pages.
+![Project preview](assets/goit-js-05.jpg)
 
-Задача 1. Імена користувачів
+⚠️ **Attention!**  
+File and folder names, as well as their nesting structure, must **exactly match** the specified scheme. Otherwise, the work will not be accepted.
 
-Виконуй це завдання у файлі task-1.js
+- Read each task carefully and complete it in the corresponding file.
+- Make sure the code is formatted using **Prettier**.
+- When opening the live page, there should be no errors or warnings in the console.
+- Submit the homework for review.
 
-Напиши стрілочну функцію getUserNames(users), яка прийматиме один параметр users — масив об’єктів користувачів. Функція має повертати масив імен усіх користувачів (властивість name) із масиву users.
+---
 
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її викликів.
+## Submission format
 
+The homework must contain **two links**:
+
+- a link to the source files (repository with the code);
+- a link to the live page on **GitHub Pages**.
+
+---
+
+## Task 1. User names
+
+**File:** `task-1.js`
+
+Write an **arrow function** `getUserNames(users)` that takes one parameter `users` — an array of user objects.
+
+The function should return an array of **all user names** (the `name` property) from the `users` array.
+
+---
+
+### Code for testing
+
+Take the code below and paste it after declaring your function to check that it works correctly.  
+The results of the function calls will be logged to the console.
+
+```js
 console.log(
-getUserNames([
-{
-name: "Moore Hensley",
-email: "moorehensley@indexia.com",
-balance: 2811
-},
-{
-name: "Sharlene Bush",
-email: "sharlenebush@tubesys.com",
-balance: 3821
-},
-{
-name: "Ross Vazquez",
-email: "rossvazquez@xinware.com",
-balance: 3793
-},
-{
-name: "Elma Head",
-email: "elmahead@omatom.com",
-balance: 2278
-},
-{
-name: "Carey Barr",
-email: "careybarr@nurali.com",
-balance: 3951
-},
-{
-name: "Blackburn Dotson",
-email: "blackburndotson@furnigeer.com",
-balance: 1498
-},
-{
-name: "Sheree Anthony",
-email: "shereeanthony@kog.com",
-balance: 2764
-},
-])
-); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
+  getUserNames([
+    {
+      name: "Moore Hensley",
+      email: "moorehensley@indexia.com",
+      balance: 2811,
+    },
+    {
+      name: "Sharlene Bush",
+      email: "sharlenebush@tubesys.com",
+      balance: 3821,
+    },
+    {
+      name: "Ross Vazquez",
+      email: "rossvazquez@xinware.com",
+      balance: 3793,
+    },
+    {
+      name: "Elma Head",
+      email: "elmahead@omatom.com",
+      balance: 2278,
+    },
+    {
+      name: "Carey Barr",
+      email: "careybarr@nurali.com",
+      balance: 3951,
+    },
+    {
+      name: "Blackburn Dotson",
+      email: "blackburndotson@furnigeer.com",
+      balance: 1498,
+    },
+    {
+      name: "Sheree Anthony",
+      email: "shereeanthony@kog.com",
+      balance: 2764,
+    },
+  ])
+);
+// ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
+```
 
 Залиш цей код для перевірки ментором.
 
-На що буде звертати увагу ментор при перевірці:
+---
 
-Оголошена змінна getUserNames
-Змінній getUserNames присвоєна стрілочна функція з параметром (users).
-Для перебирання параметра users використовується метод map()
-Виклик функції із зазначеним масивом користувачів повертає масив ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
-Виклик функції з випадковими, але валідними аргументами повертає правильне значення
+## На що буде звертати увагу ментор при перевірці:
 
-Задача 2. Користувачі з другом
+- Оголошена змінна `getUserNames`
+- Змінній `getUserNames` присвоєна **стрілочна функція** з параметром `(users)`
+- Для перебирання параметра `users` використовується метод `map()`
+- Виклик функції із зазначеним масивом користувачів повертає масив  
+  `["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]`
+- Виклик функції з випадковими, але валідними аргументами повертає правильне значення
 
-Виконуй це завдання у файлі task-2.js
+---
 
-Напиши стрілочну функцію getUsersWithFriend(users, friendName) , яка прийматиме два параметра:
+## Задача 2. Користувачі з другом
 
-перший параметр users — масив об’єктів користувачів
-другий параметр friendName — ім’я друга для пошуку.
-Функція має повертати масив усіх користувачів із масиву users, у яких є друг з іменем friendName. Друзі кожного користувача зберігаються у властивості friends. Якщо користувачів, у яких є такий друг немає, то функція має повернути порожній масив.
+**Файл:** `task-2.js`
 
-Поради:
+Напиши **стрілочну функцію** `getUsersWithFriend(users, friendName)`, яка прийматиме два параметра:
 
-Метод filter() можна використовувати для створення нового масиву з елементами, які задовольняють певну умову.
-Використовуй метод includes() для перевірки, чи масив friends містить friendName.
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+- `users` — масив об’єктів користувачів;
+- `friendName` — ім’я друга для пошуку.
 
+Функція має повертати масив **усіх користувачів** із масиву `users`, у яких є друг з іменем `friendName`.
+
+Друзі кожного користувача зберігаються у властивості `friends`.
+
+Якщо користувачів, у яких є такий друг, немає — функція повинна повернути **порожній масив**.
+
+---
+
+### Поради:
+
+- Метод `filter()` можна використовувати для створення нового масиву з елементами, які задовольняють певну умову.
+- Використовуй метод `includes()` для перевірки, чи масив `friends` містить `friendName`.
+
+---
+
+### Код для перевірки
+
+Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.  
+У консоль будуть виведені результати її роботи.
+
+```js
 const allUsers = [
-{
-name: "Moore Hensley",
-friends: ["Sharron Pace"]
-},
-{
-name: "Sharlene Bush",
-friends: ["Briana Decker", "Sharron Pace"]
-},
-{
-name: "Ross Vazquez",
-friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"]
-},
-{
-name: "Elma Head",
-friends: ["Goldie Gentry", "Aisha Tran"]
-},
-{
-name: "Carey Barr",
-friends: ["Jordan Sampson", "Eddie Strong"]
-},
-{
-name: "Blackburn Dotson",
-friends: ["Jacklyn Lucas", "Linda Chapman"]
-},
-{
-name: "Sheree Anthony",
-friends: ["Goldie Gentry", "Briana Decker"]
-}
+  {
+    name: "Moore Hensley",
+    friends: ["Sharron Pace"],
+  },
+  {
+    name: "Sharlene Bush",
+    friends: ["Briana Decker", "Sharron Pace"],
+  },
+  {
+    name: "Ross Vazquez",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+  },
+  {
+    name: "Elma Head",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+  },
+  {
+    name: "Carey Barr",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+  },
+  {
+    name: "Blackburn Dotson",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+  },
+  {
+    name: "Sheree Anthony",
+    friends: ["Goldie Gentry", "Briana Decker"],
+  },
 ];
 
 console.log(getUsersWithFriend(allUsers, "Briana Decker"));
 // [
-// {
-// name: "Sharlene Bush",
-// friends: ["Briana Decker", "Sharron Pace"]
-// },
-// {
-// name: "Sheree Anthony",
-// friends: ["Goldie Gentry", "Briana Decker"]
-// }
+//   {
+//     name: "Sharlene Bush",
+//     friends: ["Briana Decker", "Sharron Pace"]
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     friends: ["Goldie Gentry", "Briana Decker"]
+//   }
 // ]
 
 console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
 // [
-// {
-// name: "Elma Head",
-// friends: ["Goldie Gentry", "Aisha Tran"]
-// },
-// {
-// name: "Sheree Anthony",
-// friends: ["Goldie Gentry", "Briana Decker"]
-// }
+//   {
+//     name: "Elma Head",
+//     friends: ["Goldie Gentry", "Aisha Tran"]
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     friends: ["Goldie Gentry", "Briana Decker"]
+//   }
 // ]
 
-console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
+console.log(getUsersWithFriend(allUsers, "Adrian Cross")); // []
+```
 
-Залиш цей код для перевірки ментором.
+Leave this code for the mentor to review.
 
-На що буде звертати увагу ментор при перевірці:
+---
 
-Оголошена змінна getUsersWithFriend
-Змінній getUsersWithFriend присвоєна стрілочна функція з параметрами (users, friendName)
-Для перебирання параметра users використовується метод filter()
-Якщо значення параметра friendName — це рядок "Briana Decker", функція повертає масив об'єктів користувачів з іменами Sharlene Bush і Sheree Anthony
-Якщо значення параметра friendName — це рядок "Goldie Gentry", функція повертає масив об'єктів користувачів з іменами Elma Head і Sheree Anthony
-Якщо значення параметра friendName — це рядок "Adrian Cross", функція повертає порожній масив
-Виклик функції з випадковими, але валідними аргументами повертає правильне значення
+## What the mentor will pay attention to during the review:
 
-Задача 3. Сортування за кількістю друзів
+- The variable `getUsersWithFriend` is declared
+- The variable `getUsersWithFriend` is assigned an **arrow function** with parameters `(users, friendName)`
+- The `filter()` method is used to iterate over the `users` parameter
+- If the value of the `friendName` parameter is the string `"Briana Decker"`, the function returns an array of user objects with the names **Sharlene Bush** and **Sheree Anthony**
+- If the value of the `friendName` parameter is the string `"Goldie Gentry"`, the function returns an array of user objects with the names **Elma Head** and **Sheree Anthony**
+- If the value of the `friendName` parameter is the string `"Adrian Cross"`, the function returns an **empty array**
+- Calling the function with random but valid arguments returns the correct result
 
-Виконуй це завдання у файлі task-3.js
+---
 
-Напиши стрілочну функцію sortByDescendingFriendCount(users) , яка прийматиме один параметр users — масив об’єктів користувачів.
+## Task 3. Sorting by Number of Friends
 
-Функція має повертати масив усіх користувачів, відсортованих за спаданням кількостій їх друзів (властивість friends).
+**File:** `task-3.js`
 
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+Complete this task in the `task-3.js` file.
 
+Write an **arrow function** `sortByDescendingFriendCount(users)` that takes one parameter `users` — an array of user objects.
+
+The function should return an array of **all users**, sorted in **descending order** by the number of their friends (the `friends` property).
+
+---
+
+### Code for testing
+
+Take the code below and paste it after declaring your function to verify that it works correctly.  
+The results of its execution will be logged to the console.
+
+```js
 console.log(
-sortByDescendingFriendCount([
-{
-name: "Moore Hensley",
-friends: ["Sharron Pace"],
-gender: "male"
-},
-{
-name: "Sharlene Bush",
-friends: ["Briana Decker", "Sharron Pace"],
-gender: "female"
-},
-{
-name: "Ross Vazquez",
-friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-gender: "male"
-},
-{
-name: "Elma Head",
-friends: ["Goldie Gentry", "Aisha Tran"],
-gender: "female"
-},
-{
-name: "Carey Barr",
-friends: ["Jordan Sampson", "Eddie Strong"],
-gender: "male"
-},
-{
-name: "Blackburn Dotson",
-friends: ["Jacklyn Lucas", "Linda Chapman"],
-gender: "male"
-},
-{
-name: "Sheree Anthony",
-friends: ["Goldie Gentry", "Briana Decker"],
-gender: "female"
-}
-])
+  sortByDescendingFriendCount([
+    {
+      name: "Moore Hensley",
+      friends: ["Sharron Pace"],
+      gender: "male",
+    },
+    {
+      name: "Sharlene Bush",
+      friends: ["Briana Decker", "Sharron Pace"],
+      gender: "female",
+    },
+    {
+      name: "Ross Vazquez",
+      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+      gender: "male",
+    },
+    {
+      name: "Elma Head",
+      friends: ["Goldie Gentry", "Aisha Tran"],
+      gender: "female",
+    },
+    {
+      name: "Carey Barr",
+      friends: ["Jordan Sampson", "Eddie Strong"],
+      gender: "male",
+    },
+    {
+      name: "Blackburn Dotson",
+      friends: ["Jacklyn Lucas", "Linda Chapman"],
+      gender: "male",
+    },
+    {
+      name: "Sheree Anthony",
+      friends: ["Goldie Gentry", "Briana Decker"],
+      gender: "female",
+    },
+  ])
 );
 // [
-// {
-// name: "Ross Vazquez",
-// friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-// gender: "male"
-// },
-// {
-// name: "Sharlene Bush",
-// friends: ["Briana Decker", "Sharron Pace"],
-// gender: "female"
-// },
-// {
-// name: "Elma Head",
-// friends: ["Goldie Gentry", "Aisha Tran"],
-// gender: "female"
-// },
-// {
-// name: "Carey Barr",
-// friends: ["Jordan Sampson", "Eddie Strong"],
-// gender: "male"
-// },
-// {
-// name: "Blackburn Dotson",
-// friends: ["Jacklyn Lucas", "Linda Chapman"],
-// gender: "male"
-// },
-// {
-// name: "Sheree Anthony",
-// friends: ["Goldie Gentry", "Briana Decker"],
-// gender: "female"
-// },
-// {
-// name: "Moore Hensley",
-// friends: ["Sharron Pace"],
-// gender: "male"
-// }
+//   {
+//     name: "Ross Vazquez",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Elma Head",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Moore Hensley",
+//     friends: ["Sharron Pace"],
+//     gender: "male"
+//   }
 // ]
+```
 
-Залиш цей код для перевірки ментором.
+Leave this code for mentor review.
 
-На що буде звертати увагу ментор при перевірці:
+---
 
-Оголошена змінна sortByDescendingFriendCount
-Змінній sortByDescendingFriendCount присвоєна стрілочна функція з параметром (users)
-Для перебирання параметра users використаний метод toSorted()
-Виклик функції із зазначеним масивом users повертає новий масив користувачів, відсортований за спаданням кількості їхніх друзів
-Виклик функції з випадковими, але валідними аргументами повертає правильне значення
+## What the mentor will pay attention to during the review:
 
-Задача 4. Загальний баланс
+- The variable `sortByDescendingFriendCount` is declared
+- The variable `sortByDescendingFriendCount` is assigned an **arrow function** with the parameter `(users)`
+- The `toSorted()` method is used to iterate over the `users` parameter
+- Calling the function with the specified `users` array returns a **new array of users**, sorted **in descending order by the number of their friends**
+- Calling the function with random but valid arguments returns the correct value
 
-Напиши стрілочну функцію getTotalBalanceByGender(users, gender), яка прийматиме два параметра:
+---
 
-перший параметр users — масив об’єктів користувачів,
-другий параметр gender — рядок, що зберігає стать.
-Функція має використовувати ланцюжок виклику методів та повертати загальний баланс користувачів (властивість balance), стать яких (властивість gender) збігається зі значенням параметра gender.
+## Task 4. Total balance
 
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+Write an **arrow function** `getTotalBalanceByGender(users, gender)` that takes two parameters:
 
+- `users` — an array of user objects;
+- `gender` — a string that represents gender.
+
+The function should **use a method chaining approach** and return the **total balance of users** (the `balance` property) whose gender (the `gender` property) matches the value of the `gender` parameter.
+
+---
+
+### Code for testing
+
+Take the code below and paste it after declaring your function to verify that it works correctly.  
+The results of its execution will be displayed in the console.
+
+```js
 const clients = [
-{
-name: "Moore Hensley",
-gender: "male",
-balance: 2811
-},
-{
-name: "Sharlene Bush",
-gender: "female",
-balance: 3821
-},
-{
-name: "Ross Vazquez",
-gender: "male",
-balance: 3793
-},
-{
-name: "Elma Head",
-gender: "female",
-balance: 2278
-},
-{
-name: "Carey Barr",
-gender: "male",
-balance: 3951
-},
-{
-name: "Blackburn Dotson",
-gender: "male",
-balance: 1498
-},
-{
-name: "Sheree Anthony",
-gender: "female",
-balance: 2764
-}
+  {
+    name: "Moore Hensley",
+    gender: "male",
+    balance: 2811,
+  },
+  {
+    name: "Sharlene Bush",
+    gender: "female",
+    balance: 3821,
+  },
+  {
+    name: "Ross Vazquez",
+    gender: "male",
+    balance: 3793,
+  },
+  {
+    name: "Elma Head",
+    gender: "female",
+    balance: 2278,
+  },
+  {
+    name: "Carey Barr",
+    gender: "male",
+    balance: 3951,
+  },
+  {
+    name: "Blackburn Dotson",
+    gender: "male",
+    balance: 1498,
+  },
+  {
+    name: "Sheree Anthony",
+    gender: "female",
+    balance: 2764,
+  },
 ];
 
 console.log(getTotalBalanceByGender(clients, "male")); // 12053
-
 console.log(getTotalBalanceByGender(clients, "female")); // 8863
+```
 
-Залиш цей код для перевірки ментором.
+Leave this code for the mentor to review.
 
-На що буде звертати увагу ментор при перевірці:
+---
 
-Оголошена змінна getTotalBalanceByGender
-Змінній getTotalBalanceByGender присвоєна стрілочна функція з параметрами (users, gender)
-У тілі функції використовується ланцюжок методів у правильному порядку
-Значення параметра users не змінюється
-Якщо значення параметра gender — це рядок "male", функція повертає число 12053
-Якщо значення параметра gender — це рядок "female", функція повертає число 8863
-Виклик функції з випадковими, але валідними аргументами повертає правильне значення
+## What the mentor will pay attention to during the review:
+
+- The variable `getTotalBalanceByGender` is declared
+- The variable `getTotalBalanceByGender` is assigned an **arrow function** with parameters `(users, gender)`
+- A **method chaining** approach is used inside the function body in the correct order
+- The value of the `users` parameter is **not mutated**
+- If the value of the `gender` parameter is the string `"male"`, the function returns the number `12053`
+- If the value of the `gender` parameter is the string `"female"`, the function returns the number `8863`
+- Calling the function with random but valid arguments returns the **correct value**
+
+---
+
+**Live page: [GitHub Pages](https://akinaru72.github.io/goit-js-hw-05/)**
