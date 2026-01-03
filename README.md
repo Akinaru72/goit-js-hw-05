@@ -84,49 +84,49 @@ console.log(
 // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
 ```
 
-Залиш цей код для перевірки ментором.
+Leave this code for the mentor to review.
 
 ---
 
-## На що буде звертати увагу ментор при перевірці:
+## What the mentor will pay attention to during the review:
 
-- Оголошена змінна `getUserNames`
-- Змінній `getUserNames` присвоєна **стрілочна функція** з параметром `(users)`
-- Для перебирання параметра `users` використовується метод `map()`
-- Виклик функції із зазначеним масивом користувачів повертає масив  
+- The variable `getUserNames` is declared
+- The variable `getUserNames` is assigned an **arrow function** with parameter `(users)`
+- The `map()` method is used to iterate over the `users` parameter
+- Calling the function with the specified array of users returns the array  
   `["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]`
-- Виклик функції з випадковими, але валідними аргументами повертає правильне значення
+- Calling the function with random but valid arguments returns the correct value
 
 ---
 
-## Задача 2. Користувачі з другом
+## Task 2. Users with a friend
 
-**Файл:** `task-2.js`
+**File:** `task-2.js`
 
-Напиши **стрілочну функцію** `getUsersWithFriend(users, friendName)`, яка прийматиме два параметра:
+Write an **arrow function** `getUsersWithFriend(users, friendName)` that takes two parameters:
 
-- `users` — масив об’єктів користувачів;
-- `friendName` — ім’я друга для пошуку.
+- `users` — an array of user objects
+- `friendName` — the name of a friend to search for
 
-Функція має повертати масив **усіх користувачів** із масиву `users`, у яких є друг з іменем `friendName`.
+The function should return an array of all users from the `users` array who have a friend with the name `friendName`.
 
-Друзі кожного користувача зберігаються у властивості `friends`.
+Each user’s friends are stored in the `friends` property.
 
-Якщо користувачів, у яких є такий друг, немає — функція повинна повернути **порожній масив**.
-
----
-
-### Поради:
-
-- Метод `filter()` можна використовувати для створення нового масиву з елементами, які задовольняють певну умову.
-- Використовуй метод `includes()` для перевірки, чи масив `friends` містить `friendName`.
+If there are no users with the specified friend, the function should return an **empty array**.
 
 ---
 
-### Код для перевірки
+### Tips:
 
-Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи.  
-У консоль будуть виведені результати її роботи.
+- You can use the `filter()` method to create a new array with elements that satisfy a condition
+- Use the `includes()` method to check whether the `friends` array contains `friendName`
+
+---
+
+### Test code
+
+Use the code below **after declaring your function** to check that it works correctly.  
+The console will display the results of its execution.
 
 ```js
 const allUsers = [
